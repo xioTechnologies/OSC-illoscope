@@ -82,7 +82,7 @@ void oscEvent(OscMessage theOscMessage) {
   println(addrPattern);
 
   // Analogue input values
-  if (addrPattern.equals("/input/analog")) {
+  if (addrPattern.equals("/inputs/analogue")) {
     for(int i = 0; i < analogInputs.length; i ++) {
       analogInputs[i] = theOscMessage.get(i).floatValue();
     }
