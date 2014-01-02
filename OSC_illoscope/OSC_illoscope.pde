@@ -37,7 +37,7 @@ void draw() {
   stroke(255);      // trace colour
   for (int i = 0; i < selectedChannels.length; i++) {
     float graphHeight = height / selectedChannels.length;
-    float yPos = map(analogInputs[selectedChannels[i] - 1], 0, 1, i * graphHeight, i * graphHeight + graphHeight);
+    float yPos = map(analogInputs[selectedChannels[i] - 1], 0, 1, i * graphHeight + graphHeight, i * graphHeight);
     line(xPos, previousYPos[i], xPos+1, yPos);
     previousYPos[i] = yPos;
   }
